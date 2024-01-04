@@ -1,0 +1,12 @@
+<%- include('headers') -%>
+<h1>Please Post the blog below</h1>
+<form action="/createpost" method="post">
+  <label for="postTitle">Post Title</label> <br />
+  <input type="text" name="postTitle" id="postTitle" /> <br />
+  <label for="postBody">Post Body</label> <br />
+  <textarea name="postBody" id="" cols="50" rows="10"></textarea> <br />
+  <label for="author">Author</label> <br />
+  <input type="text" name="postAuthor" id="author" /> <br />
+  <button type="submit">Create Post</button>
+</form>
+<%- include('footer') -%>

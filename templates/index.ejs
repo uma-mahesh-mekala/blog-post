@@ -1,0 +1,19 @@
+<%- include('headers') -%>
+<div id="welcome-message">Welcome to My Blog!</div>
+<div class="post-list">
+  <% posts.forEach(async function(post){ %>
+  <div class="post-container">
+    <h3 class="post-title"><%=post.postTitle %></h3>
+    <p class="post-body">
+      <% if (post.postBody.length > 300) { %> <%= post.postBody.substring(0,
+      300) + "..." %>
+      <a href="/post/<%= post.postId %>" class="Readmore-link">Readmore</a>
+      <% } else { %> <%= post.postBody %> <% } %>
+    </p>
+    <p class="post-author">Author: <%=post.postAuthor %></p>
+  </div>
+  <% }) %>
+</div>
+<button class="new-post-btn"><a href="/newpost">Add New Post</a></button>
+
+<%- include('footer') -%>

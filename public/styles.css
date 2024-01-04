@@ -1,0 +1,82 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  color: white;
+  padding: 2px;
+  text-align: center;
+}
+
+.post-container {
+  /* Define overall container styles (e.g., width, padding, margin) */
+  width: 80%;
+  margin: 10px auto; /* Center the container */
+  padding: 20px;
+  border: 1px solid #ccc; /* Optional border */
+}
+
+.post-title {
+  /* Style the title element */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-body {
+  /* Style the body element */
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.post-author {
+  /* Style the author element */
+  font-style: italic;
+}
+
+.new-post-btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.new-post-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.Readmore-link {
+  text-decoration: none;
+}
+
+footer {
+  margin: 10px 0px;
+  text-align: center;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  position: sticky;
+  bottom: 0;
+}
+
+#welcome-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+#welcome-message.fade-in {
+  opacity: 1;
+}
+#welcome-message.fade-out {
+  opacity: 0;
+}
